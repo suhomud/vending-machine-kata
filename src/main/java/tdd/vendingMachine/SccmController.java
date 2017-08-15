@@ -25,8 +25,8 @@ public class SccmController implements HardwareController {
 
     public SccmController(Display display, Inventory inventory, Account account, Bucket bucket, Memory memory) {
         try {
-            acceptableDenominations = propertyReader.readAcceptableDenominations();
             propertyReader = new PropertyReader();
+            acceptableDenominations = propertyReader.readAcceptableDenominations();
         } catch (IOException e) {
             throw new IllegalStateException();
         }
