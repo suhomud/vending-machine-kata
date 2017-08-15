@@ -4,7 +4,6 @@ import tdd.vendingMachine.exception.NotEnoughMoneyException;
 import tdd.vendingMachine.model.Product;
 
 import java.io.IOException;
-import java.util.HashSet;
 import java.util.Set;
 
 import static tdd.vendingMachine.util.CoinsCalculator.calculateChange;
@@ -21,7 +20,7 @@ public class SccmController implements HardwareController {
     private Bucket bucket;
     private Memory memory;
     private PropertyReader propertyReader;
-    private Set<Integer> acceptableDenominations = new HashSet<>();
+    private Set<Integer> acceptableDenominations;
 
     public SccmController(Display display, Inventory inventory, Account account, Bucket bucket, Memory memory) {
         try {
